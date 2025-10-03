@@ -2,7 +2,7 @@
 
 // Desafio Super Trunfo - Países
 // Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
+// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
 
 int main()
@@ -23,8 +23,8 @@ int main()
        // VARIAVEIS DO SUPER PODER E DE COMPARAÇÃO DAS CARTAS.
        float super_poder_carta_um, super_poder_carta_dois;
 
-       // VARIAVEIS DE RESULTADO.
-       int resultado_populacao, resultado_area, resultado_pib, resultado_pontos_turisticos, resultado_densidade_populacional, resultado_per_capita, resultado_super_poder;
+       // VARIAVEL PARA OPÇÂO.
+       int opcao;
 
        // Entrada de dados da carta um;
        printf("DADOS DA CARTA UM \n");
@@ -127,92 +127,138 @@ int main()
               densidade_carta_dois,
               per_capita_carta_dois);
 
-       // BLOCO DE COMPARAÇÃO DAS CARTAS - FIZ COM TODAS PARA ENTENDER MELHOR COMO FUNCIONA O IF E ELSE
-       printf("\n DUELO DE CARTAS \n");
+       // BLOCO DE DUELO O USUARIO DEVE ESCOLHER UMA OPÇÃO ENTRE AS SETE UTILIZANDO NUMEROS QUE VÃO DE 1 A 7 CASO O NUMERO SEJA
+       // CASO O NUMERO SEJA 0 OU QUALQUER NUMERO MAIOR QUE 7 O JOGO SE ENCERRADO E AVISA QUE O NUMERO É INVALIDO
+       // PESQUISAR EM COMO FAZER QUANDO O USUARIO NÃO COLOCAR NUMERO NENHUM.
+       printf("\n --- DUELO DE CARTAS ---- \n");
+       printf("Escolha um numero para o duelo entre as cartas \n"
+              "(1) - POPULAÇÂO / (2) - ÀREA  / (3) - PIB / (4) - PONTOS TURISTICOS / (5) - DENSIDADE POPULACIONAL / (6) - RENDA PER CAPITA / (7) - SUPER PODER \nOPÇÂO: ");
+       scanf("%d", &opcao);
 
-       printf("\n----- POPULAÇÃO -----\n");
-       printf("Carta 1 - %s - POPULAÇÃO: %lu \n", nome_carta_um, populacao_carta_um);
-       printf("Carta 2 - %s - POPULAÇÃO: %lu \n", nome_carta_dois, populacao_carta_dois);
-       if (populacao_carta_um > populacao_carta_dois)
+       switch (opcao)
        {
-              printf("Carta 1 - %s - VENCEU \n", nome_carta_um);
+       case 1:
+              printf("\n -- POPULAÇÃO -- \n");
+              printf("Carta 1 - %s - População: %lu \n", nome_carta_um, populacao_carta_um);
+              printf("Carta 2 - %s - População: %lu \n", nome_carta_dois, populacao_carta_dois);
+              if (populacao_carta_um > populacao_carta_dois)
+              {
+                     printf("Carta 1 - %s - VENCEU", nome_carta_um);
+              }
+              else if (populacao_carta_dois > populacao_carta_um)
+              {
+                     printf("Carta 2 - %s - VENCEU", nome_carta_dois);
+              }
+              else
+              {
+                     printf("Houve um empate entre as cartas");
+              }
+              break;
+       case 2:
+              printf("\n -- ÁREA -- \n");
+              printf("Carta 1 - %s - Área: %2.f \n", nome_carta_um, area_carta_um);
+              printf("Carta 2 - %s - Área: %2.f \n", nome_carta_dois, area_carta_dois);
+              if (area_carta_um > area_carta_dois)
+              {
+                     printf("Carta 1 - %s - VENCEU", nome_carta_um);
+              }
+              else if (area_carta_dois > area_carta_um)
+              {
+                     printf("Carta 2 - %s - VENCEU", nome_carta_dois);
+              }
+              else
+              {
+                     printf("Houve um empate entre as cartas");
+              }
+              break;
+       case 3:
+              printf("\n -- PIB -- \n");
+              printf("Carta 1 - %s - PIB: %2.f \n", nome_carta_um, pib_carta_um);
+              printf("Carta 2 - %s - PIB: %2.f \n", nome_carta_dois, pib_carta_dois);
+              if (pib_carta_um > pib_carta_dois)
+              {
+                     printf("Carta 1 - %s - VENCEU", nome_carta_um);
+              }
+              else if (pib_carta_dois > pib_carta_um)
+              {
+                     printf("Carta 2 - %s - VENCEU", nome_carta_dois);
+              }
+              else
+              {
+                     printf("Houve um empate entre as cartas");
+              }
+              break;
+       case 4:
+              printf("\n -- PONTOS TURISTICOS -- \n");
+              printf("Carta 1 - %s - Pontos Turisticos: %d \n", nome_carta_um, pontos_turisticos_carta_um);
+              printf("Carta 2 - %s - Pontos Turisticos: %d \n", nome_carta_dois, pontos_turisticos_carta_dois);
+              if (pontos_turisticos_carta_um > pontos_turisticos_carta_dois)
+              {
+                     printf("Carta 1 - %s - VENCEU", nome_carta_um);
+              }
+              else if (pontos_turisticos_carta_dois > pontos_turisticos_carta_um)
+              {
+                     printf("Carta 2 - %s - VENCEU", nome_carta_dois);
+              }
+              else
+              {
+                     printf("Houve um empate entre as cartas");
+              }
+              break;
+       case 5:
+              printf("\n -- DENSIDADE POPULACIONAL -- \n");
+              printf("Carta 1 - %s - Densidade Populacional: %2.f \n", nome_carta_um, densidade_carta_um);
+              printf("Carta 2 - %s - Densidade Populacional: %2.f \n", nome_carta_dois, densidade_carta_um);
+              if (densidade_carta_um > densidade_carta_dois)
+              {
+                     printf("Carta 1 - %s - VENCEU", nome_carta_um);
+              }
+              else if (densidade_carta_dois > densidade_carta_um)
+              {
+                     printf("Carta 2 - %s - VENCEU", nome_carta_dois);
+              }
+              else
+              {
+                     printf("Houve um empate entre as cartas");
+              }
+              break;
+       case 6:
+              printf("\n -- RENDA PER CAPITA -- \n");
+              printf("Carta 1 - %s - Renda Per Capita: %2.f \n", nome_carta_um, per_capita_carta_um);
+              printf("Carta 2 - %s - Renda Per Capita: %2.f \n", nome_carta_dois, per_capita_carta_um);
+              if (per_capita_carta_um > per_capita_carta_dois)
+              {
+                     printf("Carta 1 - %s - VENCEU", nome_carta_um);
+              }
+              else if (per_capita_carta_dois > per_capita_carta_um)
+              {
+                     printf("Carta 2 - %s - VENCEU", nome_carta_dois);
+              }
+              else
+              {
+                     printf("Houve um empate entre as cartas");
+              }
+              break;
+       case 7:
+              printf("\n -- SUPER PODER -- \n");
+              printf("Carta 1 - %s - Super Poder: %2.f \n", nome_carta_um, super_poder_carta_um);
+              printf("Carta 2 - %s - Super Poder: %2.f \n", nome_carta_dois, super_poder_carta_dois);
+              if (super_poder_carta_um > super_poder_carta_dois)
+              {
+                     printf("Carta 1 - %s - VENCEU", nome_carta_um);
+              }
+              else if (super_poder_carta_dois > super_poder_carta_um)
+              {
+                     printf("Carta 2 - %s - VENCEU", nome_carta_dois);
+              }
+              else
+              {
+                     printf("Houve um empate entre as cartas");
+              }
+              break;
+       default:
+              printf("NUMERO INVALIDO FIM DE JOGO");
+              break;
        }
-       else
-       {
-              printf("Carta 2 - %s - VENCEU \n", nome_carta_dois);
-       }
-
-       printf("\n----- AREA -----\n");
-       printf("Carta 1 - %s - AREA: %.2f \n", nome_carta_um, area_carta_um);
-       printf("Carta 2 - %s - AREA: %.2f \n", nome_carta_dois, area_carta_dois);
-       if (area_carta_um > area_carta_dois)
-       {
-              printf("Carta 1 - %s - VENCEU \n", area_carta_um);
-       }
-       else
-       {
-              printf("Carta 2 - %s - VENCEU \n", nome_carta_dois);
-       }
-
-       printf("\n----- PIB -----\n");
-       printf("Carta 1 - %s - PIB: %.2f \n", nome_carta_um, pib_carta_um);
-       printf("Carta 2 - %s - PIB: %.2f \n", nome_carta_dois, pib_carta_dois);
-       if (pib_carta_um > pib_carta_dois)
-       {
-              printf("Carta 1 - %s - VENCEU \n", nome_carta_um);
-       }
-       else
-       {
-              printf("Carta 2 - %s - VENCEU \n", nome_carta_dois);
-       }
-
-       printf("\n----- PONTOS TURISTICOS -----\n");
-       printf("Carta 1 - %s - PONTOS TURISTICOS: %d \n", nome_carta_um, pontos_turisticos_carta_um);
-       printf("Carta 2 - %s - PONTOS TURISTICOS: %d \n", nome_carta_dois, pontos_turisticos_carta_dois);
-       if (pontos_turisticos_carta_um > pontos_turisticos_carta_dois)
-       {
-              printf("Carta 1 - %s - VENCEU \n", nome_carta_um);
-       }
-       else
-       {
-              printf("Carta 2 - %s - VENCEU \n", nome_carta_dois);
-       }
-
-       printf("\n----- DENSIDADE -----\n");
-       printf("Carta 1 - %s - DENSIDADE: %.2f \n", nome_carta_um, densidade_carta_um);
-       printf("Carta 2 - %s - DENSIDADE: %.2f \n", nome_carta_dois, densidade_carta_dois);
-       if (densidade_carta_um < densidade_carta_dois)
-       {
-              printf("Carta 1 - %s - VENCEU \n", nome_carta_um);
-       }
-       else
-       {
-              printf("Carta 2 - %s - VENCEU \n", nome_carta_dois);
-       }
-
-       printf("\n----- PER CAPITA -----\n");
-       printf("Carta 1 - %s - PER CAPITA: %.2f \n", nome_carta_um, per_capita_carta_um);
-       printf("Carta 2 - %s - PER CAPITA: %.2f \n", nome_carta_dois, per_capita_carta_dois);
-       if (per_capita_carta_um > per_capita_carta_dois)
-       {
-              printf("Carta 1 - %s - VENCEU \n", nome_carta_um);
-       }
-       else
-       {
-              printf("Carta 2 - %s - VENCEU \n", nome_carta_dois);
-       }
-
-       printf("\n----- SUPER PODER -----\n");
-       printf("Carta 1 - %s - SUPER PODER: %2.f \n", nome_carta_um, super_poder_carta_um);
-       printf("Carta 2 - %s - SUPER PODER: %2.f \n", nome_carta_dois, super_poder_carta_dois);
-       if (super_poder_carta_um > super_poder_carta_dois)
-       {
-              printf("Carta 1 - %s - VENCEU \n", nome_carta_um);
-       }
-       else
-       {
-              printf("Carta 2 - %s - VENCEU \n", nome_carta_dois);
-       }
-
        return 0;
 }
