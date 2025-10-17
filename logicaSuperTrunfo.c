@@ -209,11 +209,11 @@ int main()
               printf("\n -- DENSIDADE POPULACIONAL -- \n");
               printf("Carta 1 - %s - Densidade Populacional: %2.f \n", nome_carta_um, densidade_carta_um);
               printf("Carta 2 - %s - Densidade Populacional: %2.f \n", nome_carta_dois, densidade_carta_um);
-              if (densidade_carta_um > densidade_carta_dois)
+              if (densidade_carta_um < densidade_carta_dois)
               {
                      printf("Carta 1 - %s - VENCEU", nome_carta_um);
               }
-              else if (densidade_carta_dois > densidade_carta_um)
+              else if (densidade_carta_dois < densidade_carta_um)
               {
                      printf("Carta 2 - %s - VENCEU", nome_carta_dois);
               }
