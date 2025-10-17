@@ -26,18 +26,18 @@ int main()
     estado_carta_um = 'a';
     strcpy(codigo_carta_um, "a01");
     strcpy(nome_carta_um, "riodejaneiro");
-    populacao_carta_um = 0;
-    area_carta_um =  2;
-    pib_carta_um = 2;
+    populacao_carta_um = 13123;
+    area_carta_um =  23123;
+    pib_carta_um = 6456;
     pontos_turisticos_carta_um = 1;
 
     // Entrada de dados da carta dois;
     estado_carta_dois = 'b';
     strcpy(codigo_carta_dois, "b02");
     strcpy(nome_carta_dois, "saopaulo");
-    populacao_carta_dois = 1;
-    area_carta_dois = 1;
-    pib_carta_dois = 1;
+    populacao_carta_dois = 5312;
+    area_carta_dois = 123413;
+    pib_carta_dois = 56243;
     pontos_turisticos_carta_dois = 11;
 
     // Aqui é feito o calculo da DENSIDADE POPULACIONAL e do PIB PER CAPTA de ambas as cartas.
